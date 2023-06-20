@@ -3,12 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "serve": "vue-cli-service serve --mode development",
+    "build:dev": "vue-cli-service build --mode development",
+    "build": "vue-cli-service build --mode production",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "vant": "^2.12.54",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
     "vuex": "^3.4.0"
@@ -20,13 +22,21 @@
     "@vue/cli-plugin-vuex": "~4.5.4",
     "@vue/cli-service": "~4.5.4",
     "@vue/eslint-config-prettier": "^6.0.0",
+    "autodll-webpack-plugin": "^0.4.2",
+    "axios": "^0.26.1",
     "babel-eslint": "^10.1.0",
+    "compression-webpack-plugin": "6.1.1",
+    "dayjs": "^1.11.3",
     "eslint": "^6.7.2",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^6.2.2",
+    "hard-source-webpack-plugin": "^0.13.1",
     "node-sass": "^4.12.0",
     "prettier": "^2.2.1",
     "sass-loader": "^8.0.2",
+    "qs": "6.9.4",
+    "qs.js": "0.1.12",
+    "vconsole-webpack-plugin": "1.5.1",
     "vue-template-compiler": "^2.6.11"
   }
 }

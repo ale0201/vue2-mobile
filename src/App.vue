@@ -1,20 +1,34 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
+    <transition>
+      <keep-alive :include="keepAlive">
+        <router-view />
+      </keep-alive>
+    </transition>
   </div>
 </template>
-
+<script>
+export default {
+  name: 'App',
+  data() {
+    return {}
+  },
+  computed: {
+    keepAlive() {
+      return this.$store.state.keepAlive
+    },
+  },
+}
+</script>
 <style lang="scss">
+@import './assets/css/common.scss';
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  overflow-x: hidden;
 }
 
 #nav {
